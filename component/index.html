@@ -15,8 +15,7 @@
 <body>
 
     <div id='main-layout'>
-        <div class='article-preview-component' style="
- ">
+        <div class='article-preview-component'>
             <div class='article-preview-image'>
                 <img src='../images/drawers.jpg' />
             </div>
@@ -41,16 +40,25 @@
                         </div>
 
                     </div>
-                    <div class='.article-preview-component-share'>
+                    <div class='article-preview-component-share' onclick="myFunction()">
                         <img src="../images/icon-share.svg" />
-
+                        <span class="popuptext" id="myPopup">
+                            <p>SHARE</p><img src='../images/icon-facebook.svg' /><img
+                                src="../images/icon-twitter.svg" /> <img src='../images/icon-pinterest.svg' />
+                        </span>
                     </div>
 
                 </div>
             </div>
         </div>
     </div>
-
+    <script>
+        // When the user clicks on div, open the popup
+        function myFunction() {
+            var popup = document.getElementById("myPopup");
+            popup.classList.toggle("show");
+        }
+    </script>
     <script src="scripts.js"></script>
 </body>
 
